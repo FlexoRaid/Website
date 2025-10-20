@@ -1,0 +1,85 @@
+/* 
+
+---------------Colors---------------
+background-color: #0d0d3b (dark blue)
+Section-color: #00000b (very dark blue)
+Text-color: #ffffff (white)
+button-color: #34347a (grayish blue)
+
+
+
+*/
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #0d0d3b;
+    color: #fff;
+}
+
+/* Classes & IDs */
+
+.Profile-Section {
+    background-color: #00000b;
+    width: 75%;
+    margin: 30px auto 0;
+    border-radius: 17px;
+}
+
+.Profile-Section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    transition: 0.4s ease-in-out;
+}
+
+.Profile-Section:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.Profile-Picture-Container {
+    display: flex;
+    width: 200px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.Profile-Picture {
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+
+.Profile-Picture:hover {
+    border-color: #00a300;
+    width: 140px;
+}
+
+#Name {
+    background: linear-gradient(-90deg, #0000ff, #0099ff);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-size: 52px;
+    font-weight: bold;
+    text-decoration: none!important;
+}
+
+.Info {
+    display: inline-block; /* or display: block; */
+    margin: 10px 10px 0 0; /* top right bottom left */
+    text-decoration: none;
+    color: #ffffff;
+    padding: 7px 30px;
+    border-radius: 8px;
+    background-color: #34347a;
+    transition: 0.2s ease-in-out;
+}
+
+.Info:hover {
+    transform: translateY(-3px);
+}
