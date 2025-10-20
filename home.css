@@ -60,13 +60,17 @@ body {
     width: 140px;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 #Name {
     background: linear-gradient(-90deg, #0000ff, #0099ff);
     -webkit-background-clip: text;
     color: transparent; 
     font-size: 52px;
     font-weight: bold;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .Info {
