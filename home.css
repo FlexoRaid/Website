@@ -2,88 +2,252 @@
 
 ---------------Colors---------------
 background-color: #0d0d3b (dark blue)
-Section-color: #00000b (very dark blue)
-Text-color: #ffffff (white)
-button-color: #34347a (grayish blue)
-
-
+Section-color: #131325 (darker blue)
+text-color: #8e8ed3 (light purple)
+------------------------------------
 
 */
 
+/* -------------generally------------- */
+
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #0d0d3b;
-    color: #fff;
+    padding: 0;
+    background-color: #131325;
+    color: #8e8ed3;
 }
 
-/* Classes & IDs */
-
-.Profile-Section {
-    background-color: #00000b;
-    width: 75%;
-    margin: 30px auto 0;
-    border-radius: 17px;
+a {
+    color: #8e8ed3;
 }
+
+/* -------------Profile Section--------------- */
 
 .Profile-Section {
     display: flex;
+    background-color: #242f3d;
+    width: 1000px;
+    box-sizing: border-box;
+    height: 400px;
+    margin: 30px 0 15px 0;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    transition: 0.4s ease-in-out;
+    justify-content: space-between;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
 }
 
 .Profile-Section:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px #8e8ed3;
 }
 
 .Profile-Picture-Container {
     display: flex;
-    width: 200px;
-    height: 150px;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    width: 300px;
+    height: 100%;
+    /* border: 2px solid #fff; */
 }
 
 .Profile-Picture {
-    width: 120px;
+    width: 220px;
+    height: 220px;
+    margin: 30px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid transparent;
-    transition: 0.4s ease-in-out;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    will-change: transform, border-radius;
 }
 
 .Profile-Picture:hover {
-    border-color: #00a300;
-    width: 140px;
+    transform: scale(1.1);
+    border-radius: 25%;
 }
 
-a {
-    text-decoration: none !important;
+.Profile-Info {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-#Name {
-    background: linear-gradient(-90deg, #0000ff, #0099ff);
-    -webkit-background-clip: text;
-    color: transparent; 
+.p1 {
     font-size: 52px;
-    font-weight: bold;
-    text-decoration: none !important;
+    width: max-content;
+    display: inline-block;
+    margin: 40px 0 0 0;
+    background: linear-gradient(90deg, #8e8ed3, #434394);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
 }
 
-.Info {
-    display: inline-block; /* or display: block; */
-    margin: 10px 10px 0 0; /* top right bottom left */
-    text-decoration: none;
-    color: #ffffff;
-    padding: 7px 30px;
-    border-radius: 8px;
-    background-color: #34347a;
-    transition: 0.2s ease-in-out;
+#Age {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 70px;
 }
 
-.Info:hover {
-    transform: translateY(-3px);
+.p2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#Chess {
+    display: inline-block;
+    position: relative;
+    color: #8e8ed3;
+    font-weight: 650;
+    transition: color 0.3s ease-in-out;
+}
+
+#Chess::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0%;
+    background: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+#Chess:hover {
+    color: #fff;
+}
+
+#Chess:hover::after {
+    width: 100%;
+}
+
+/* -------------About Section------------- */
+
+.About-Section {
+    display: flex;
+    width: 1000px;
+    box-sizing: border-box;
+    height: 400px;
+    margin: 15px 0 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.About-Me {
+    display: flex;
+    flex-direction: column;
+    background-color: #242f3d;
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.p3, .p5 {
+    display: flex;
+    font-size: 32px;
+    font-weight: 650;
+    margin: 25px 0 0 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.p4, .p6 {
+    display: flex;
+    font-size: 20px;
+    margin: 15px 15px 0 15px;
+    line-height: 1.6;
+}
+
+.About-Me:hover {
+    box-shadow: 0 0 15px #8e8ed3;
+}
+
+.Current-Activities {
+    display: flex;
+    flex-direction: column;
+    background-color: #242f3d;
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.Current-Activities:hover {
+    box-shadow: 0 0 15px #8e8ed3;
+}
+
+/* -------------Skill Section--------------- */
+
+.Skill-Section {
+    display: flex;
+    background-color: #242f3d;
+    width: 1000px;
+    box-sizing: border-box;
+    height: 400px;
+    margin: 15px 0 15px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.Skill-Section:hover {
+    box-shadow: 0 0 15px #8e8ed3;
+}
+
+.Programming-Languages {
+    display: flex;
+}
+
+.Other-Skills {
+    display: flex;
+}
+
+/* -------------Contributions------------- */
+
+.Contributions-Section {
+    display: flex;
+    background-color: #242f3d;
+    width: 1000px;
+    box-sizing: border-box;
+    height: 400px;
+    margin: 15px 0 15px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.Contributions-Section:hover {
+    box-shadow: 0 0 15px #8e8ed3;
+}
+
+/* -------------Footer------------- */
+
+.Footer-Section {
+    display: flex;
+    background-color: #242f3d;
+    width: 1000px;
+    box-sizing: border-box;
+    height: 400px;
+    margin: 15px 0 15px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.Footer-Section:hover {
+    box-shadow: 0 0 15px #8e8ed3;
 }
