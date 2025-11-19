@@ -1,5 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Visitor counter
+
+        (function() {
+        var s = document.createElement('script');
+        s.src = "https://counterapi.com/c.js";
+        s.async = true;
+        document.getElementById('visitor-counter').appendChild(s);
+    })();
+    
     // Age calculation
+
     (function() {
         const birth = new Date(2009, 6, 22, 12, 30);
 
