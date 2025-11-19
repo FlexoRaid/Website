@@ -33,36 +33,22 @@ h2 {
     color: var(--text-color);
 }
 
-/* -------- Visit counter -------- */
-#visitor-counter {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    padding: 8px 14px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    z-index: 9999;
-    font-weight: 600;
-}
-#visitor-counter-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+#visitor-counter #visitor-counter-link {
     text-decoration: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    z-index: 9999;
 }
-
-#visitor-counter .eye-icon {
-    width: 22px;
-    filter: brightness(0) invert(1);
+#visitor-counter span#visitor-number {
+    font-weight: 700;
+    margin-right: 5px;
 }
-
-#visitor-counter span {
-    font-size: 20px;
-}
-
 
 /* -------- Profile Section -------- */
 .profile-section {
@@ -159,6 +145,7 @@ h2 {
 }
 
 #chess {
+    te-decoration: none;
     position: relative;
     display: inline-block;
     font-weight: 600;
