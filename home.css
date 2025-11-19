@@ -3,7 +3,8 @@
     --section-color: #242f3d;
     --text-color: #8e8ed3;
     --accent-color: #32e67f;
-    --shadow-color: rgba(142, 142, 211, 0.5);
+    --shadow-color: rgba(42, 42, 83, 1);
+    --shadow-color-2: rgba(0, 0, 0, 1);
 }
 
 /* -------- General -------- */
@@ -51,11 +52,37 @@ h2 {
 }
 
 .profile-picture-container {
+    position: relative;
     flex: 0 0 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    cursor: pointer;
+}
+
+.profile-picture-container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(30%, 10px); 
+    background-color: var(--section-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.profile-picture-container:hover::after {
+    opacity: 1;
+    transform: translate(70%, -10px);
 }
 
 .profile-picture {
@@ -186,10 +213,6 @@ h2 {
     justify-items: center;
 }
 
-image {
-
-}
-
 .skill-item {
     display: flex;
     flex-direction: column;
@@ -208,13 +231,13 @@ image {
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: 0 0 10px var(--shadow-color-2);
 }
 
 .skill-item img {
     width: 70px;
     margin-bottom: 5px;
-    border-radius: 12px; /* abgerundete Bilder */
+    border-radius: 12px;
     object-fit: cover;
 }
 
@@ -268,6 +291,7 @@ image {
     margin-bottom: 15px;
     background-color: #1d1d3b;
     padding: 12px;
+    max-width:;
     border-radius: 12px;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -275,7 +299,7 @@ image {
 
 .language:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: 0 0 10px var(--shadow-color-2);
 }
 
 .language::after {
@@ -329,12 +353,18 @@ image {
 
 /* -------- Chess Section -------- */
 .chess-section {
+    flex: 2;
     width: 90%;
     max-width: 1000px;
     background-color: var(--section-color);
     padding: 20px;
     border-radius: 15px;
     margin: 20px 0;
+    transition: box-shadow 0.3s;
+}
+
+.chess-section:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
 }
 
 .chess-scroll-area {
@@ -360,28 +390,28 @@ image {
     border-collapse: collapse;
 }
 
-/* Standard-Tabelle */
+
 .chess-table th, .chess-table td {
-    padding: 8px 10px; /* Standard */
+    padding: 8px 10px;
     text-align: left;
     color: var(--text-color);
 }
 
-/* Responsive Anpassung */
+
 @media (max-width: 768px) {
     .chess-table th, .chess-table td {
-        padding: 4px 6px; /* Weniger Abstand auf kleinen Bildschirmen */
-        font-size: 14px;  /* Optional: Schrift kleiner machen */
+        padding: 4px 6px;
+        font-size: 14px;
     }
 
     .chess-scroll-area {
-        max-height: 200px; /* Optional: etwas kleinere Scrollbox */
+        max-height: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .chess-table th, .chess-table td {
-        padding: 2px 4px; /* Minimaler Abstand für sehr kleine Bildschirme */
+        padding: 2px 4px;
         font-size: 12px;
     }
 
@@ -391,14 +421,20 @@ image {
 }
 
 
-/* -------- Footer -------- */
-.footer-section {
+/* -------- Contect -------- */
+.contact-section {
+    flex: 2;
     width: 90%;
     max-width: 1000px;
     background-color: var(--section-color);
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     border-radius: 15px;
     margin: 20px 0;
+    transition: box-shadow 0.3s;
+}
+
+.contact-section:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
 }
 
 .contact-container {
@@ -422,6 +458,7 @@ image {
 
 .contact-box:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px var(--shadow-color-2);
 }
 
 .contact-icon {
