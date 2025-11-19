@@ -1,3 +1,4 @@
+/* -------- Variables -------- */
 :root {
     --bg-color: #131325;
     --section-color: #242f3d;
@@ -23,7 +24,7 @@ body {
     align-items: center;
     font-size: 18px;
     line-height: 1.6;
-    margin: 0 0 20px 0;
+    margin: 0 0 50px 0;
 }
 
 h2 {
@@ -58,7 +59,6 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 10px;
-    cursor: pointer;
 }
 
 .profile-picture-container::after {
@@ -111,6 +111,10 @@ h2 {
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 10px;
+}
+
+.name1 {
+    color: transparent;
 }
 
 #age {
@@ -421,7 +425,7 @@ h2 {
 }
 
 
-/* -------- Contect -------- */
+/* -------- Contact -------- */
 .contact-section {
     flex: 2;
     width: 90%;
@@ -458,7 +462,6 @@ h2 {
 
 .contact-box:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px var(--shadow-color-2);
 }
 
 .contact-icon {
@@ -473,6 +476,26 @@ h2 {
 .github { background: linear-gradient(90deg, #333, #292929); }
 .instagram { background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .telegram { background: linear-gradient(90deg, #37aee2, #1e96c8, #1e96c8); }
+.TikTok { background: linear-gradient(90deg, #69C9D0, #EE1D52); }
+.Spotify { background: linear-gradient(90deg, #1DB954, #008f32); }
+
+.discord:hover { box-shadow: 0 0 10px #006eff; }
+.github:hover { box-shadow: 0 0 10px #333; }
+.instagram:hover { box-shadow: 0 0 10px #dc2743; }
+.telegram:hover { box-shadow: 0 0 10px #37aee2; }
+.TikTok:hover { box-shadow: 0 0 10px #69C9D0; }
+.Spotify:hover { box-shadow: 0 0 10px #1DB954; }
+
+/* -------- Footer -------- */
+
+footer {
+    text-align: center;
+}
+
+.link {
+    color: var(--text-color);
+    font-weight: 700;
+}
 
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
