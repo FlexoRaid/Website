@@ -1,83 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonatan's Portfolio</title>
+<link rel="shortcut icon" href="Unterschrift.png" type="image/x-icon">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<!-- Chessboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <title>Jonatan</title>
-
-    <script src="home.js" defer></script>
-    <link rel="stylesheet" href="home.css">
-
-
+<!-- Styles & Scripts -->
+<link rel="stylesheet" href="home.css">
+<script src="home.js" defer></script>
 </head>
 <body>
 
-<!--Profile Section-->
+<!-- Profile Section -->
+<section class="profile-section">
+  <div class="profile-picture-container">
+    <img class="profile-picture" src="Candy.JPG" alt="Jonatan">
+  </div>
+  <div class="profile-info">
+    <p class="name">Jonatan Przewlocki</p>
+    <p id="age"></p>
+    <p class="description">
+        Programmer | Tech Enthusiast | 
+    <a class="chess-link" href="https://www.chess.com/member/kolege_von_hettinger" target="_blank" rel="noopener noreferrer">
+        <span id="chess">Chess Player</span>
+    </a>
+        | Lifelong Learner
+    </p>
+  </div>
+</section>
 
-    <section class="Profile-Section">
-        <div class="Profile-Picture-Container">
-            <img class="Profile-Picture" src="images/Candy.JPG" alt="Profile-Picture">
-        </div>            
-                
-        <div class="Profile-Info">
-            <p class="p1">Jonatan Przewlocki</p>
-            <div id="Age"></div>
-            <p class="p2">Programmer | Tech Enthusiast | <a href="https://www.chess.com/member/kolege_von_hettinger" target="_blank" rel="noopener noreferrer"><span id="Chess">Chess player</span></a> | Lifelong Learner</p>
-        </div>
-            
-    </section>
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-me">
+    <h2>About Me</h2>
+    <p>Hi, I'm Jonatan from Germany. I try to be the best version of myself by learning, training, and eating healthy. I made this website to practice HTML, CSS, and JavaScript. In the future, I want to create an open-world game with high-end graphics.</p>
+  </div>
+  <div class="current-activities">
+    <h2>Current Activities</h2>
+    <ul>
+      <li>Learning web development (HTML, CSS, JavaScript)</li>
+      <li>Playing chess on chess.com</li>
+      <li>Learning for School</li>
+      <li>Playing Minecraft on my friends' server</li>
+    </ul>
+  </div>
+</section>
 
-    <!--About Section-->
-    
-    <section class="About-Section">
-        <div class="About-Me">
-            <p class="p3">About me</p>
-            <p class="p4">Hi im Jonatan, I'm from Germany and I am trying to be the best version of myself, by learning new things, training and eating healthy. I made this website to practise html, css and Java Script. In the future I'll want to programm a open world game, with hight end graffics.</p>
-        </div>
+<!-- Skill Section -->
+<section class="skill-section">
+  <div class="programming-languages">
+    <h2>Programming Languages</h2>
+    <div class="skills-grid">
+      <a class="skill-item" href="https://www.w3schools.com/html/default.asp" data-tooltip="Currently learning">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML/CSS">
+        <span>HTML/CSS</span>
+      </a>
+      <a class="skill-item" href="https://www.javascript.com" data-tooltip="Just know the basics">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript">
+        <span>JavaScript</span>
+      </a>
+      <a class="skill-item" href="https://www.python.org" data-tooltip="Programmed a calculator with it">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+        <span>Python</span>
+      </a>
+      <a class="skill-item" href="https://de.wikipedia.org/wiki/C%2B%2B" data-tooltip="Bought a book to learn it">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+        <span>C++</span>
+      </a>
+    </div>
+  </div>
 
-        <div class="Current-Activities">
-            <p class="p5">Current Activities</p>
-            <p>...</p>
-        </div>
-    </section>
+  <div class="other-skills">
+    <h2>Languages</h2>
+    <div class="language" data-tooltip="C1 Level">
+      <span>English</span>
+      <div class="ring" style="--percent: 90%;"></div>
+    </div>
+    <div class="language" data-tooltip="C3 Level">
+      <span>German</span>
+      <div class="ring" style="--percent: 100%;"></div>
+    </div>
+    <div class="language" data-tooltip="Native Speaker">
+      <span>Polish</span>
+      <div class="ring" style="--percent: 100%;"></div>
+    </div>
+  </div>
+</section>
 
-<!--Skill Section-->
+<!-- Chess Section -->
+<section class="chess-section">
+  <h2>Chess</h2>
+  <div class="chess-scroll-area">
+    <table class="chess-table">
+      <thead>
+        <tr>
+          <th>Opponent</th>
+          <th>Elo</th>
+          <th>Result</th>
+          <th>Mode</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="games-table-body">
 
-    <section class="Skill-Section">
-        <div class="Programming-Languages">
+      </tbody>
+    </table>
+  </div>
+  <p id="loading">Loading games...</p>
+</section>
 
-        </div>
 
-        <div class="Other-Skills">
-            
-        </div>
-    </section>
-
-<!--Contributions-->
-
-    <section class="Contributions-Section">
-
-    </section>
-
-<!--Footer-->
-
-        <section class="Footer-Section">
-
-        </section>
+<!-- Contact Section -->
+<footer class="footer-section">
+  <h2>Contact</h2>
+  <div class="contact-container">
+    <a class="contact-box discord" href="https://discord.com" target="_blank">
+      <img class="contact-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png" alt="Discord">
+      <p>Discord</p>
+    </a>
+    <a class="contact-box github" href="https://github.com/DEIN_USERNAME" target="_blank">
+      <img class="contact-icon" src="https://raw.githubusercontent.com/zyqunix/devicon/404c165ff8d0b7eda226ec5eb66fdfc64f5f381f/icons/github/github-original.svg" alt="GitHub">
+      <p>GitHub</p>
+    </a>
+    <a class="contact-box instagram" href="https://www.instagram.com/DEIN_USERNAME" target="_blank">
+      <img class="contact-icon" src="https://raw.githubusercontent.com/zyqunix/simple-icons/725d82d3e0d7feb029b84fb3ccaec2f5ec1e5fb5/icons/instagram.svg" alt="Instagram">
+      <p>Instagram</p>
+    </a>
+    <a class="contact-box telegram" href="https://t.me/DEIN_USERNAME" target="_blank">
+      <img class="contact-icon" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/telegram.svg" alt="Telegram">
+      <p>Telegram</p>
+    </a>
+  </div>
+</footer>
 
 </body>
 </html>
