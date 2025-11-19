@@ -33,7 +33,7 @@ h2 {
     color: var(--text-color);
 }
 
-#visitor-counter #visitor-counter-link {
+#visitor-counter {
     text-decoration: none;
     position: fixed;
     top: 20px;
@@ -44,8 +44,6 @@ h2 {
     font-weight: 600;
     font-size: 18px;
     z-index: 9999;
-}
-#visitor-counter span#visitor-number {
     font-weight: 700;
     margin-right: 5px;
 }
@@ -535,3 +533,4 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
+
