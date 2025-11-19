@@ -1,4 +1,15 @@
+// Visitor Counter
+
+fetch('https://counterapi.dev/api/FlexoRaid-portfolio/visits/up')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("visitor-number").textContent = data.value;
+    })
+    .catch(err => console.error("Visitor counter error:", err));
+
+
 // age calculation
+
 
 (function () {
     const birth = new Date(2009, 6, 22, 12, 30); 
