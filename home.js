@@ -1,7 +1,7 @@
 // age calculation
 
 (function () {
-    const birth = new Date(2009, 6, 22, 12, 30); // 22. Juli 2009
+    const birth = new Date(2009, 6, 22, 12, 30); 
 
     function calculateAgeYearsDecimal(birthDate) {
         const now = new Date();
@@ -13,14 +13,14 @@
     function updateAgeDisplay() {
         const yearsDecimal = calculateAgeYearsDecimal(birth);
         const formatted = yearsDecimal.toFixed(2);
-        const ageP = document.getElementById('age'); // korrekt auf 'age'
+        const ageP = document.getElementById('age'); 
         if (ageP) {
             ageP.textContent = `${formatted} years old | July 22, 2009`;
         }
     }
 
     updateAgeDisplay();
-    setInterval(updateAgeDisplay, 3600 * 1000); // jede Stunde aktualisieren
+    setInterval(updateAgeDisplay, 3600 * 1000); 
 })();
 
 
@@ -32,7 +32,7 @@ const USERNAME = "kolege_von_hettinger";
 const tbody = document.getElementById("games-table-body");
 const loading = document.getElementById("loading");
 
-// Mapping von Resultaten
+
 const resultMap = {
   win: { text: "won", class: "result-win" },
   checkmated: { text: "lost", class: "result-loss" },
@@ -45,7 +45,7 @@ const resultMap = {
   abandoned: { text: "abandoned", class: "result-abandoned" }
 };
 
-// Alle Spiele laden
+
 async function fetchAllGames(username) {
   try {
     const archivesResp = await fetch(`https://api.chess.com/pub/player/${username}/games/archives`);
@@ -65,7 +65,7 @@ async function fetchAllGames(username) {
   }
 }
 
-// Tabelle füllen
+
 function populateTable(games) {
   tbody.innerHTML = "";
 
@@ -95,7 +95,7 @@ function populateTable(games) {
   });
 }
 
-// Hauptfunktion
+
 async function loadChessGames() {
   loading.style.display = "block";
   const games = await fetchAllGames(USERNAME);
@@ -103,5 +103,5 @@ async function loadChessGames() {
   populateTable(games);
 }
 
-// Start
+
 loadChessGames();
