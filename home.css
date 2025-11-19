@@ -1,253 +1,459 @@
-/* 
+:root {
+    --bg-color: #131325;
+    --section-color: #242f3d;
+    --text-color: #8e8ed3;
+    --accent-color: #32e67f;
+    --shadow-color: rgba(142, 142, 211, 0.5);
+}
 
----------------Colors---------------
-background-color: #0d0d3b (dark blue)
-Section-color: #131325 (darker blue)
-text-color: #8e8ed3 (light purple)
-------------------------------------
-
-*/
-
-/* -------------generally------------- */
+/* -------- General -------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #131325;
-    color: #8e8ed3;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
 }
 
-a {
-    color: #8e8ed3;
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--text-color);
 }
 
-/* -------------Profile Section--------------- */
-
-.Profile-Section {
+/* -------- Profile Section -------- */
+.profile-section {
     display: flex;
-    background-color: #242f3d;
-    width: 1000px;
-    box-sizing: border-box;
-    height: 400px;
-    margin: 30px 0 15px 0;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 15px;
-    transition: 0.3s ease-in-out;
-}
-
-.Profile-Section:hover {
-    box-shadow: 0 0 15px #8e8ed3;
-}
-
-.Profile-Picture-Container {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 300px;
-    height: 100%;
-    /* border: 2px solid #fff; */
+    align-items: center;
+    background-color: var(--section-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    max-width: 1000px;
+    transition: box-shadow 0.3s;
 }
 
-.Profile-Picture {
-    width: 220px;
-    height: 220px;
-    margin: 30px;
+.profile-section:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.profile-picture-container {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #fff;
-    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-    will-change: transform, border-radius;
+    transition: transform 0.3s ease;
 }
 
-.Profile-Picture:hover {
+.profile-picture:hover {
     transform: scale(1.1);
-    border-radius: 25%;
 }
 
-.Profile-Info {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
 }
 
-.p1 {
-    font-size: 52px;
-    width: max-content;
-    display: inline-block;
-    margin: 40px 0 0 0;
-    background: linear-gradient(90deg, #8e8ed3, #434394);
+.name {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-color), #434394);
     -webkit-background-clip: text;
     color: transparent;
-    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-#Age {
-    font-size: 32px;
-    font-weight: 700;
-    margin-top: 70px;
-}
-
-.p2 {
+#age {
     font-size: 24px;
-    margin-top: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-#Chess {
-    display: inline-block;
+.description {
+    font-size: 20px;
+}
+
+#chess {
     position: relative;
-    color: #8e8ed3;
-    font-weight: 650;
-    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: color 0.3s;
 }
 
-#Chess::after {
-    content: "";
+#chess::after {
+    content: '';
     position: absolute;
+    bottom: -3px;
     left: 0;
-    bottom: -4px;
     height: 2px;
     width: 0%;
-    background: #fff;
+    background-color: #fff;
     transition: width 0.3s ease-in-out;
 }
 
-#Chess:hover {
+#chess:hover {
     color: #fff;
 }
 
-#Chess:hover::after {
+#chess:hover::after {
     width: 100%;
 }
 
-/* -------------About Section------------- */
-
-.About-Section {
+/* -------- About Section -------- */
+.about-section {
     display: flex;
-    width: 1000px;
-    box-sizing: border-box;
-    height: 400px;
-    margin: 15px 0 15px 0;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px 0;
 }
 
-.About-Me {
+.about-me, .current-activities {
+    flex: 1 1 280px;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    background-color: #242f3d;
-    width: calc(50% - 15px);
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    border-radius: 15px;
-    transition: 0.3s ease-in-out;
-    padding: 20px;
 }
 
-.p3, .p5 {
-    display: flex;
-    font-size: 32px;
-    font-weight: 650;
-    margin: 25px 0 0 15px;
-    transition: 0.3s ease-in-out;
+.about-me:hover, .current-activities:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
 }
 
-.p4, .p6 {
-    display: flex;
+.about-me p, .current-activities ul {
     font-size: 20px;
-    margin: 15px 15px 0 15px;
-    line-height: 1.6;
 }
 
-.About-Me:hover {
-    box-shadow: 0 0 15px #8e8ed3;
+.current-activities ul {
+    list-style: disc;
+    margin-left: 20px;
 }
 
-.Current-Activities {
+/* -------- Skills Section -------- */
+.skill-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px 0;
+}
+
+.programming-languages {
+    flex: 2;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.programming-languages:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+image {
+
+}
+
+.skill-item {
     display: flex;
     flex-direction: column;
-    background-color: #242f3d;
-    width: calc(50% - 15px);
-    box-sizing: border-box;
+    align-items: center;
+    background-color: #1d1d3b;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
     height: 100%;
-    margin: 0;
     border-radius: 15px;
-    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.skill-item img {
+    width: 70px;
+    margin-bottom: 5px;
+    border-radius: 12px; /* abgerundete Bilder */
+    object-fit: cover;
+}
+
+.skill-item span {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Tooltip */
+.skill-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--section-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.skill-item:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* -------- Language Section -------- */
+.other-skills {
+    flex: 1;
+    background-color: var(--section-color);
     padding: 20px;
-}
-
-.Current-Activities:hover {
-    box-shadow: 0 0 15px #8e8ed3;
-}
-
-/* -------------Skill Section--------------- */
-
-.Skill-Section {
-    display: flex;
-    background-color: #242f3d;
-    width: 1000px;
-    box-sizing: border-box;
-    height: 400px;
-    margin: 15px 0 15px 0;
-    align-items: center;
-    justify-content: space-between;
     border-radius: 15px;
-    transition: 0.3s ease-in-out;
+    transition: box-shadow 0.3s;
 }
 
-.Skill-Section:hover {
-    box-shadow: 0 0 15px #8e8ed3;
+.other-skills:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
 }
 
-.Programming-Languages {
+.language {
     display: flex;
-}
-
-.Other-Skills {
-    display: flex;
-}
-
-/* -------------Contributions------------- */
-
-.Contributions-Section {
-    display: flex;
-    background-color: #242f3d;
-    width: 1000px;
-    box-sizing: border-box;
-    height: 400px;
-    margin: 15px 0 15px 0;
-    align-items: center;
     justify-content: space-between;
-    border-radius: 15px;
-    transition: 0.3s ease-in-out;
-}
-
-.Contributions-Section:hover {
-    box-shadow: 0 0 15px #8e8ed3;
-}
-
-/* -------------Footer------------- */
-
-.Footer-Section {
-    display: flex;
-    background-color: #242f3d;
-    width: 1000px;
-    box-sizing: border-box;
-    height: 400px;
-    margin: 15px 0 15px 0;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 15px;
-    transition: 0.3s ease-in-out;
+    margin-bottom: 15px;
+    background-color: #1d1d3b;
+    padding: 12px;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.Footer-Section:hover {
-    box-shadow: 0 0 15px #8e8ed3;
+.language:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.language::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--section-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.language:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.ring {
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+}
+
+.ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(#4b4b60 100%, transparent 0);
+    mask: radial-gradient(circle, transparent calc(50% - 4px), black calc(50% - 3px));
+}
+
+.ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent-color) var(--percent), transparent 0);
+    mask: radial-gradient(circle, transparent calc(50% - 4px), black calc(50% - 3px));
+    transition: transform 0.3s;
+}
+
+/* -------- Chess Section -------- */
+.chess-section {
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.chess-scroll-area {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 1px solid #3a3a5c;
+}
+
+.chess-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+.chess-scroll-area::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+.chess-scroll-area::-webkit-scrollbar-track {
+    background: #1d1d3b;
+}
+
+.chess-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Standard-Tabelle */
+.chess-table th, .chess-table td {
+    padding: 8px 10px; /* Standard */
+    text-align: left;
+    color: var(--text-color);
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    .chess-table th, .chess-table td {
+        padding: 4px 6px; /* Weniger Abstand auf kleinen Bildschirmen */
+        font-size: 14px;  /* Optional: Schrift kleiner machen */
+    }
+
+    .chess-scroll-area {
+        max-height: 200px; /* Optional: etwas kleinere Scrollbox */
+    }
+}
+
+@media (max-width: 480px) {
+    .chess-table th, .chess-table td {
+        padding: 2px 4px; /* Minimaler Abstand für sehr kleine Bildschirme */
+        font-size: 12px;
+    }
+
+    .chess-scroll-area {
+        max-height: 150px;
+    }
+}
+
+
+/* -------- Footer -------- */
+.footer-section {
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-box {
+    flex: 1 1 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.contact-box:hover {
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.discord { background: linear-gradient(90deg, #006eff, #0150b6); }
+.github { background: linear-gradient(90deg, #333, #292929); }
+.instagram { background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.telegram { background: linear-gradient(90deg, #37aee2, #1e96c8, #1e96c8); }
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+    .profile-section, .about-section, .skill-section, .chess-section, .footer-section {
+        flex-direction: column;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-picture {
+        width: 180px;
+        height: 180px;
+    }
+
+    h2 { font-size: 24px; }
+    .name { font-size: 36px; }
 }
