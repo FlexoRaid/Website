@@ -18,16 +18,18 @@
 <!-- Styles & Scripts -->
 <link rel="stylesheet" href="home.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="home.js" defer></script>
 </head>
 <body>
 
-<!-- Visits counter -->
-<div id="visitor-counter">
-    <a id="visitor-counter-link" href="https://app.counterapi.dev/team/jonatans-team" target="_blank" rel="noopener noreferrer" data-tooltip="Number of visitors">
-        <span id="visitor-number">0</span>
-        <i class="fa">&#xf06e;</i>
-    </a>
+<!-- Visitor Counter --> 
+
+
+
+  <div id="visitor-counter">
+  <a id="visitor-counter-link" href="https://app.counterapi.dev/team/jonatans-team" target="_blank" rel="noopener noreferrer" data-tooltip="Number of visitors">
+    <script src="https://counterapi.com/c.js" async ></script>
+    <div class="counterapi" bg="transparent" noAnim="true" startNum="0" style="min-height:44px"></div>
+  </a> 
 </div>
 
 <!-- Profile Section -->
@@ -159,11 +161,9 @@
       <img class="contact-icon" src="https://www.svgrepo.com/show/512899/spotify-162.svg" alt="Spotify">
       <p>Spotify</p>
     </a>
+
   </div>
 </section>
-
-</body>
-</html>
 
 
 <!-- Footer -->
@@ -176,3 +176,10 @@
     <p>This website is open-source on <a class="link" href="https://github.com/FlexoRaid">GitHub</a>.</p>
     <p>Inspired by <a class="link" href="https://vmohammad.dev">vMohammad's Portfolio</a> and <a class="link" href="https://zyqunix.dev">Zyqunix's Portfolio</a>.</p>
 </footer>
+
+
+</body>
+<script src="https://counterapi.com/c.js?ns=mysite.com" async ></script>
+<script src="home.js" defer></script>
+</html>
+
