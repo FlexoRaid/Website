@@ -154,7 +154,7 @@ h2 {
 }
 
 #chess {
-    te-decoration: none;
+    text-decoration: none !important;
     position: relative;
     display: inline-block;
     font-weight: 600;
