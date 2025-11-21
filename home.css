@@ -144,6 +144,7 @@ h2 {
 }
 
 #age {
+    text-decoration: none !important;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -428,7 +429,6 @@ h2 {
     color: var(--text-color);
 }
 
-
 @media (max-width: 768px) {
     .chess-table th, .chess-table td {
         padding: 4px 6px;
@@ -450,6 +450,32 @@ h2 {
         max-height: 150px;
     }
 }
+
+
+.chess-table td.result-win,
+.chess-table td span.result-win {
+  color: #32e67f;
+  font-weight: 700;
+}
+
+.chess-table td.result-loss,
+.chess-table td span.result-loss {
+  color: #ff4d4d;
+  font-weight: 700;
+}
+
+.chess-table td.result-draw,
+.chess-table td span.result-draw {
+  color: #bfbfbf;
+  font-weight: 700;
+}
+
+.chess-table td.result-abandoned,
+.chess-table td span.result-abandoned {
+  color: #ffbb33;
+  font-weight: 700;
+}
+
 
 
 /* -------- Contact -------- */
