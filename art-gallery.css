@@ -126,7 +126,7 @@ h1 {
     #menu {
         left: 10px;
         top: 55px;
-        width: 170px;
+        width: max-content;
     }
 
     .gallery-container {
@@ -145,5 +145,6 @@ h1 {
         width: 100%;
     }
 }
+
 
 
