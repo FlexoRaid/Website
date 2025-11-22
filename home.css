@@ -92,6 +92,8 @@ h2 {
 
 #menu:popover-open {
     display: grid;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #menu a {
@@ -593,6 +595,12 @@ footer {
 
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
+    #menu {
+        left: 10px;
+        top: 55px;
+        width: 160px;
+    }
+
     .profile-section, .about-section, .skill-section, .chess-section, .footer-section {
         flex-direction: column;
         width: 95%;
@@ -611,5 +619,3 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
-
-
