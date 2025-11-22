@@ -57,6 +57,46 @@ h2 {
     font-weight: 700;
 }
 
+/* -------- Drop down -------- */
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    background: none ;
+    border: none;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    anchor-name: --menu-button;
+}
+
+.menu-icon {
+    width: 25px;
+    filter: invert(1);
+}
+
+#menu {
+    font-size: 18px;
+    width: max-content;
+    min-width: 120px;
+    background: var(--text-color);
+    border: none;
+    border-radius: 0px 10px 10px 10px;
+    padding: 5px 10px;
+    position-anchor: menu-button;
+    top: anchor(bottom);
+    left: anchor(left);
+}
+
+#menu:popover-open {
+    display: grid;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: underline 2px;
+}
 
 /* -------- Profile Section -------- */
 .profile-section {
