@@ -597,7 +597,7 @@ footer {
     #menu {
         left: 10px;
         top: 55px;
-        width: 170px;
+        width: max-content;
     }
 
     .profile-section, .about-section, .skill-section, .chess-section, .footer-section {
@@ -618,3 +618,4 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
+
