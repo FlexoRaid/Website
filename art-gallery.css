@@ -79,7 +79,7 @@ h1 {
     font-size: 18px;
     width: max-content;
     height: max-content;
-    min-width: 120px;
+    min-width: 150px;
     background: var(--text-color);
     border: none;
     border-radius: 0px 10px 10px 10px;
@@ -126,7 +126,7 @@ h1 {
     #menu {
         left: 10px;
         top: 55px;
-        height: max-content;
+        width: 170px;
     }
 
     .gallery-container {
@@ -144,3 +144,4 @@ h1 {
         width: 100%;
     }
 }
+
