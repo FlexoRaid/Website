@@ -76,9 +76,10 @@ h2 {
     filter: invert(1);
 }
 
-#menu {
+#menu{
     font-size: 18px;
     width: max-content;
+    height: max-content;
     min-width: 120px;
     background: var(--text-color);
     border: none;
@@ -610,4 +611,5 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
+
 
