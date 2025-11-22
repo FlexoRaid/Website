@@ -81,7 +81,7 @@ h2 {
     width: max-content;
     height: max-content;
     min-width: 150px;
-    background: var(--text-color);
+    background: var(--section-color);
     border: none;
     border-radius: 0px 10px 10px 10px;
     padding: 5px 10px;
@@ -97,7 +97,7 @@ h2 {
 }
 
 #menu a {
-    color: #fff;
+    color: var(--text-color);
     font-weight: 700;
     text-decoration: underline 2px;
 }
@@ -598,7 +598,7 @@ footer {
     #menu {
         left: 10px;
         top: 55px;
-        width: max-content;
+        width: max-content
     }
 
     .profile-section, .about-section, .skill-section, .chess-section, .footer-section {
@@ -619,5 +619,3 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
-
-
