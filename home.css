@@ -80,7 +80,7 @@ h2 {
     font-size: 18px;
     width: max-content;
     height: max-content;
-    min-width: 120px;
+    min-width: 150px;
     background: var(--text-color);
     border: none;
     border-radius: 0px 10px 10px 10px;
@@ -598,7 +598,7 @@ footer {
     #menu {
         left: 10px;
         top: 55px;
-        width: 160px;
+        width: 170px;
     }
 
     .profile-section, .about-section, .skill-section, .chess-section, .footer-section {
@@ -619,3 +619,4 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
+
