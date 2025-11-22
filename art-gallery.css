@@ -123,10 +123,10 @@ h1 {
 
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
-    #menu {
+        #menu {
         left: 10px;
         top: 55px;
-        width: 160px;
+        height: max-content;
     }
 
     .gallery-container {
@@ -144,3 +144,4 @@ h1 {
         width: 100%;
     }
 }
+
