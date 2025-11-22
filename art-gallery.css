@@ -90,7 +90,7 @@ h1 {
 }
 
 #menu:popover-open {
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
@@ -123,7 +123,7 @@ h1 {
 
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
-        #menu {
+    #menu {
         left: 10px;
         top: 55px;
         height: max-content;
@@ -144,4 +144,3 @@ h1 {
         width: 100%;
     }
 }
-
