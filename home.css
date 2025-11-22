@@ -98,6 +98,7 @@ h2 {
 
 #menu a {
     color: #fff;
+    font-weight: 700;
     text-decoration: underline 2px;
 }
 
@@ -618,4 +619,5 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
+
 
