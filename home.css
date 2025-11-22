@@ -567,15 +567,14 @@ h2 {
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
-
-.discord { background: linear-gradient(90deg, #006eff, #0150b6); }
+.E-Mail {background: linear-gradient(90deg, #4285F4, #0a60e9);}
 .github { background: linear-gradient(90deg, #333, #292929); }
 .instagram { background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .telegram { background: linear-gradient(90deg, #37aee2, #1e96c8, #1e96c8); }
 .TikTok { background: linear-gradient(90deg, #69C9D0, #EE1D52); }
 .Spotify { background: linear-gradient(90deg, #1DB954, #008f32); }
 
-.discord:hover { box-shadow: 0 0 10px #006eff; }
+.E-Mail:hover { box-shadow: 0 0 10px #006eff; }
 .github:hover { box-shadow: 0 0 10px #333; }
 .instagram:hover { box-shadow: 0 0 10px #dc2743; }
 .telegram:hover { box-shadow: 0 0 10px #37aee2; }
@@ -619,4 +618,3 @@ footer {
     h2 { font-size: 24px; }
     .name { font-size: 36px; }
 }
-
