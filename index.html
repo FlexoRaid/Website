@@ -9,13 +9,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- Chessboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
-
-
-<!-- Styles & Scripts -->
+<!-- Styles -->
 <link rel="stylesheet" href="home.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -26,6 +20,17 @@
     <div class="counterapi" bg="transparent" noAnim="true" startNum="0" style="min-height:44px"></div>
   </div>
 
+<!-- Drop down -->
+ <button class="menu-button" popovertarget="menu">
+    <img src="menu.png" alt="menu" class="menu-icon">
+ </button>
+ <div id="menu" popover>
+    <a href="art-gallery.html">Art Gallery</a>
+    <a href="">...</a>
+    <a href="art-gallery.html">...</a>
+    <a href="art-gallery.html">...</a>
+ </div>
+
 <!-- Profile Section -->
 <section class="profile-section">
   <div class="profile-picture-container" data-tooltip="Her name is Candy">
@@ -34,7 +39,7 @@
     </a>
   </div>
   <div class="profile-info">
-    <p class="name"><a class="name1" href="https://de.wikipedia.org/wiki/Jonathan_(Vorname)" target="_blank" rel="">Jonatan</a> Przewlocki!</p>
+    <p class="name"><a class="name1" href="https://de.wikipedia.org/wiki/Jonathan_(Vorname)" target="_blank" rel="">Jonatan</a> Przewlocki</p>
     <p id="age"></p>
     <p class="description">
         Programmer | Tech Enthusiast | 
@@ -177,5 +182,4 @@
 <script src="https://counterapi.com/c.js?ns=mysite.com" async ></script>
 <script src="home.js" defer></script>
 </html>
-
 
