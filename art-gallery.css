@@ -76,11 +76,12 @@ h1 {
 }
 
 #menu{
+    display: none;
     font-size: 18px;
     width: max-content;
     height: max-content;
     min-width: 150px;
-    background: var(--text-color);
+    background: var(--section-color);
     border: none;
     border-radius: 0px 10px 10px 10px;
     padding: 5px 10px;
@@ -96,7 +97,7 @@ h1 {
 }
 
 #menu a {
-    color: #fff;
+    color: var(--text-color);
     font-weight: 700;
     text-decoration: underline 2px;
 }
@@ -125,9 +126,9 @@ h1 {
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
     #menu {
-        left: 10px;
-        top: 55px;
         width: max-content;
+        top: 60px;
+        left: 10px;
     }
 
     .gallery-container {
@@ -146,7 +147,3 @@ h1 {
         width: 100%;
     }
 }
-
-
-
-
