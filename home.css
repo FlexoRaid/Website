@@ -1,0 +1,621 @@
+/* -------- Variables -------- */
+:root {
+    --bg-color: #131325;
+    --section-color: #242f3d;
+    --text-color: #c4c4ff;
+    --accent-color: #32e67f;
+    --shadow-color: rgb(64, 64, 90);
+    --shadow-color-2: rgba(0, 0, 0, 1);
+}
+
+/* -------- General -------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 50px 0;
+}
+ 
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* -------- Visitor Counter -------- */
+#visitor-counter {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: var(--text-color);
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.counterapi a {
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+}
+
+.counterapi {
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* -------- Drop down -------- */
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    background: none ;
+    border: none;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    anchor-name: --menu-button;
+}
+
+.menu-icon {
+    width: 25px;
+    filter: invert(1);
+}
+
+#menu{
+    font-size: 18px;
+    width: max-content;
+    height: max-content;
+    min-width: 150px;
+    background: var(--section-color);
+    border: none;
+    border-radius: 0px 10px 10px 10px;
+    padding: 5px 10px;
+    position-anchor: menu-button;
+    top: anchor(bottom);
+    left: anchor(left);
+}
+
+#menu:popover-open {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#menu a {
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: underline 2px;
+}
+
+/* -------- Profile Section -------- */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    max-width: 1000px;
+    transition: box-shadow 0.3s;
+}
+
+.profile-section:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.profile-picture-container {
+    position: relative;
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile-picture-container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(30%, 10px); 
+    background-color: var(--section-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.profile-picture-container:hover::after {
+    opacity: 1;
+    transform: translate(70%, -10px);
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--text-color), #434394);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.name1 {
+    color: transparent !important;
+    text-decoration: none !important;
+}
+
+#age {
+    text-decoration: none !important;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 20px;
+}
+
+#chess {
+    text-decoration: none !important;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+#chess::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+#chess:hover {
+    color: #fff;
+}
+
+#chess:hover::after {
+    width: 100%;
+}
+
+/* -------- About Section -------- */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px 0;
+}
+
+.about-me, .current-activities {
+    flex: 1 1 280px;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me:hover, .current-activities:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.about-me p, .current-activities ul {
+    font-size: 20px;
+}
+
+.current-activities ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* -------- Skills Section -------- */
+.skill-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px 0;
+}
+
+.programming-languages {
+    flex: 2;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.programming-languages:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1d3b;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--shadow-color-2);
+}
+
+.skill-item img {
+    width: 70px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.skill-item span {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Tooltip */
+.skill-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--section-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.skill-item:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* -------- Language Section -------- */
+.other-skills {
+    flex: 1;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.other-skills:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #1d1d3b;
+    padding: 12px;
+    max-width:;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.language:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--shadow-color-2);
+}
+
+.language::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--section-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.language:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.ring {
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+}
+
+.ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(#4b4b60 100%, transparent 0);
+    mask: radial-gradient(circle, transparent calc(50% - 4px), black calc(50% - 3px));
+}
+
+.ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent-color) var(--percent), transparent 0);
+    mask: radial-gradient(circle, transparent calc(50% - 4px), black calc(50% - 3px));
+    transition: transform 0.3s;
+}
+
+/* -------- Chess Section -------- */
+.chess-section {
+    flex: 2;
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s;
+}
+
+.chess-section:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.chess-scroll-area {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 1px solid #3a3a5c;
+}
+
+.chess-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+.chess-scroll-area::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+.chess-scroll-area::-webkit-scrollbar-track {
+    background: #1d1d3b;
+}
+
+.chess-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.chess-table th, .chess-table td {
+    padding: 8px 10px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .chess-table th, .chess-table td {
+        padding: 4px 6px;
+        font-size: 14px;
+    }
+
+    .chess-scroll-area {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chess-table th, .chess-table td {
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    .chess-scroll-area {
+        max-height: 150px;
+    }
+}
+
+
+.chess-table td.result-win,
+.chess-table td span.result-win {
+  color: #32e67f;
+  font-weight: 700;
+}
+
+.chess-table td.result-loss,
+.chess-table td span.result-loss {
+  color: #ff4d4d;
+  font-weight: 700;
+}
+
+.chess-table td.result-draw,
+.chess-table td span.result-draw {
+  color: #bfbfbf;
+  font-weight: 700;
+}
+
+.chess-table td.result-abandoned,
+.chess-table td span.result-abandoned {
+  color: #ffbb33;
+  font-weight: 700;
+}
+
+
+
+/* -------- Contact -------- */
+.contact-section {
+    flex: 2;
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--section-color);
+    padding: 20px 20px 40px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s;
+}
+
+.contact-section:hover {
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-box {
+    flex: 1 1 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.contact-box:hover {
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+.E-Mail {background: linear-gradient(90deg, #4285F4, #0a60e9);}
+.github { background: linear-gradient(90deg, #333, #292929); }
+.instagram { background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.telegram { background: linear-gradient(90deg, #37aee2, #1e96c8, #1e96c8); }
+.TikTok { background: linear-gradient(90deg, #69C9D0, #EE1D52); }
+.Spotify { background: linear-gradient(90deg, #1DB954, #008f32); }
+
+.E-Mail:hover { box-shadow: 0 0 10px #006eff; }
+.github:hover { box-shadow: 0 0 10px #333; }
+.instagram:hover { box-shadow: 0 0 10px #dc2743; }
+.telegram:hover { box-shadow: 0 0 10px #37aee2; }
+.TikTok:hover { box-shadow: 0 0 10px #69C9D0; }
+.Spotify:hover { box-shadow: 0 0 10px #1DB954; }
+
+/* -------- Footer -------- */
+
+footer {
+    text-align: center;
+}
+
+.link {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+    #menu {
+        left: 10px;
+        top: 55px;
+        width: max-content
+    }
+
+    .profile-section, .about-section, .skill-section, .chess-section, .footer-section {
+        flex-direction: column;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-picture {
+        width: 180px;
+        height: 180px;
+    }
+
+    h2 { font-size: 24px; }
+    .name { font-size: 36px; }
+}

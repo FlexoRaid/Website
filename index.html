@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonatan's Portfolio</title>
+<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/206327445?s=400&v=4" type="image/x-icon">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Visitor Counter --> 
+  <div id="visitor-counter">
+    <div class="counterapi" bg="transparent" noAnim="true" startNum="0" style="min-height:44px"></div>
+  </div>
+
+<!-- Drop down -->
+ <button class="menu-button" popovertarget="menu">
+    <img src="menu.png" alt="menu" class="menu-icon">
+ </button>
+ <div id="menu" popover>
+    <a href="art-gallery.html">Art Gallery</a>
+    <a href="">...</a>
+    <a href="art-gallery.html">...</a>
+    <a href="art-gallery.html">...</a>
+ </div>
+
+<!-- Profile Section -->
+<section class="profile-section">
+  <div class="profile-picture-container" data-tooltip="Her name is Candy">
+    <a href="https://de.wikipedia.org/wiki/Britisch_Kurzhaar" target="_blank" rel="noopener noreferrer">
+        <img class="profile-picture" src="Candy.JPG" alt="Cat">
+    </a>
+  </div>
+  <div class="profile-info">
+    <p class="name"><a class="name1" href="https://de.wikipedia.org/wiki/Jonathan_(Vorname)" target="_blank" rel="">Jonatan</a> Przewlocki</p>
+    <p id="age"></p>
+    <p class="description">
+        Programmer | Tech Enthusiast | 
+    <a class="chess-link" href="https://www.chess.com/member/kolege_von_hettinger" target="_blank" rel="noopener noreferrer">
+        <span id="chess">Chess Player</span>
+    </a>
+        | Lifelong Learner
+    </p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-me">
+    <h2>About Me</h2>
+    <p>Hi, I'm Jonatan from Germany. I try to be the best version of myself by learning, training, and eating healthy. I made this website to practice HTML, CSS, and JavaScript. In the future, I want to create an open-world game with high-end graphics.</p>
+  </div>
+  <div class="current-activities">
+    <h2>Current Activities</h2>
+    <ul>
+      <li>Learning web development (HTML, CSS, JavaScript)</li>
+      <li>Playing chess on chess.com</li>
+      <li>Learning for School</li>
+      <li>Playing Minecraft on my friends' server</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Skill Section -->
+<section class="skill-section">
+  <div class="programming-languages">
+    <h2>Programming Languages</h2>
+    <div class="skills-grid">
+      <a class="skill-item" href="https://www.w3schools.com/html/default.asp" target="_blank" data-tooltip="Currently learning">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML/CSS">
+        <span>HTML/CSS</span>
+      </a>
+      <a class="skill-item" href="https://www.javascript.com" target="_blank" data-tooltip="Just know the basics">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript">
+        <span>JavaScript</span>
+      </a>
+      <a class="skill-item" href="https://www.python.org" target="_blank" data-tooltip="Programmed a calculator with it">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+        <span>Python</span>
+      </a>
+      <a class="skill-item" href="https://de.wikipedia.org/wiki/C%2B%2B" target="_blank" data-tooltip="Bought a book to learn it">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+        <span>C++</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="other-skills">
+    <h2>Languages</h2>
+    <div class="language" data-tooltip="C1 Level">
+      <span>English</span>
+      <div class="ring" style="--percent: 90%;"></div>
+    </div>
+    <div class="language" data-tooltip="C3 Level">
+      <span>German</span>
+      <div class="ring" style="--percent: 100%;"></div>
+    </div>
+    <div class="language" data-tooltip="Native Speaker">
+      <span>Polish</span>
+      <div class="ring" style="--percent: 100%;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Chess Section -->
+<section class="chess-section">
+  <h2>Chess</h2>
+  <div class="chess-scroll-area">
+    <table class="chess-table">
+      <thead>
+        <tr>
+          <th>Opponent</th>
+          <th>Elo</th>
+          <th>Result</th>
+          <th>Mode</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="games-table-body">
+
+      </tbody>
+    </table>
+  </div>
+  <p id="loading">Loading games...</p>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h2>Contact | Socials</h2>
+  <div class="contact-container">
+    <a class="contact-box E-Mail" href="mailto:jonatanprzewlocki@gmail.com?" target="_blank">
+      <img class="contact-icon" src="mail.png" alt="E-Mail">
+      <p>E-Mail</p>
+    </a>
+    <a class="contact-box github" href="https://github.com/FlexoRaid" target="_blank">
+      <img class="contact-icon" src="https://raw.githubusercontent.com/zyqunix/devicon/404c165ff8d0b7eda226ec5eb66fdfc64f5f381f/icons/github/github-original.svg" alt="GitHub">
+      <p>GitHub</p>
+    </a>
+    <a class="contact-box instagram" href="https://www.instagram.com/jonatanp_0" target="_blank">
+      <img class="contact-icon" src="https://raw.githubusercontent.com/zyqunix/simple-icons/725d82d3e0d7feb029b84fb3ccaec2f5ec1e5fb5/icons/instagram.svg" alt="Instagram">
+      <p>Instagram</p>
+    </a>
+    <a class="contact-box telegram" href="https://t.me/jonatanp_0" target="_blank">
+      <img class="contact-icon" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/telegram.svg" alt="Telegram">
+      <p>Telegram</p>
+    </a>
+    <a class="contact-box TikTok" href="https://www.tiktok.com/@jonatanp_0" target="_blank">
+      <img class="contact-icon" src="https://www.svgrepo.com/show/473806/tiktok.svg" alt="TikTok">
+      <p>TikTok</p>
+    </a>
+    <a class="contact-box Spotify" href="https://open.spotify.com/user/31kyqrwkynmcqhbqlkhgy2wu3lfi" target="_blank">
+      <img class="contact-icon" src="https://www.svgrepo.com/show/512899/spotify-162.svg" alt="Spotify">
+      <p>Spotify</p>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+    <p>
+        &copy; 2025 Jonatan Przewlocki. All rights reserved.
+    </p>
+    <p>1100+ Lines of Code.</p>
+    <p>This website is open-source on <a class="link" href="https://github.com/FlexoRaid/FlexoRaid">GitHub</a>.</p>
+    <p>Inspired by <a class="link" href="https://vmohammad.dev" target="_blank">vMohammad's Portfolio</a> and <a class="link" href="https://zyqunix.dev" target="_blank">Zyqunix's Portfolio</a>.</p>
+</footer>
+
+
+</body>
+<script src="https://counterapi.com/c.js" async ></script>
+<script src="https://counterapi.com/c.js?ns=mysite.com" async ></script>
+<script src="home.js" defer></script>
+</html>
+
