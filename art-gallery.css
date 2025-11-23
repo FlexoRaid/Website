@@ -6,6 +6,7 @@
     --accent-color: #32e67f;
     --shadow-color: rgba(42, 42, 83, 1);
     --shadow-color-2: rgba(0, 0, 0, 1);
+    --sign-color: #415e85;
 }
 
 /* -------- General -------- */
@@ -22,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
     margin: 0 0 50px 0;
 }
@@ -108,19 +109,37 @@ h1 {
     gap: 20px;
 }
 
-.picture-container, .paragraph-container {
+.picture-container{
+    display: flex;
     width: 100%;
+}
+
+.paragraph-container {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.picture-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .picture-container img {
     width: 100%;
-    height: ;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--shadow-color-2);
 }
 
-.paragraph-container p {
-    text-align: left;
+.sign {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: right;
+    color: var(--sign-color);
 }
 
 /* -------- Responsive -------- */
