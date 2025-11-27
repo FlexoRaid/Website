@@ -51,6 +51,52 @@ h2 {
     text-align: left;
 }
 
+/* -------- Drop down -------- */
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    background: none ;
+    border: none;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    anchor-name: --menu-button;
+}
+
+.menu-icon {
+    width: 25px;
+}
+
+#menu{
+    font-size: 18px;
+    width: max-content;
+    height: max-content;
+    min-width: 150px;
+    background: var(--section-color);
+    border: none;
+    border-radius: 0px 10px 10px 10px;
+    padding: 5px 10px;
+    position-anchor: menu-button;
+    top: anchor(bottom);
+    left: anchor(left);
+}
+
+#menu:popover-open {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#menu a {
+    color: var(--color);
+    font-weight: 700;
+    text-decoration: underline 2px;
+}
+
+/* -------- Sections -------- */
+
 section {
     display: flex;
     flex-wrap: wrap;
@@ -103,3 +149,4 @@ section {
     padding: 10px;
     margin: 0 0 10px 10px;
 }
+
