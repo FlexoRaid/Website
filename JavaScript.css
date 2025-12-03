@@ -107,6 +107,7 @@ section {
     width: 100%;
     max-width: 1100px;
     gap: 10px;
+    overflow: hidden;
 }
 
 .codeContainer, .consoleContainer {
@@ -115,22 +116,23 @@ section {
     flex-direction: column;
     background: none;
     color: #000;
-    overflow-y: auto;
 }
 
 .code {
-    overflow-y: auto;
+    overflow: auto;
+    font-family: 'Courier New', Courier, monospace;
     max-height: 30vh;
     min-height: 30vh;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px 0 0 15px;
-    color: var(--color2);
-    padding: 10px;
+    color: #fff;
+    padding: 5px;
     margin: 0 0 10px 10px;
 }
 
 .code::-webkit-scrollbar {
     width: 8px;
+    max-width: 8px;
 }
 .code::-webkit-scrollbar-thumb {
     background: #fff;
@@ -144,13 +146,32 @@ section {
     min-height: 30vh;
     background: #fff;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Courier New', Courier, monospace;
     border-radius: 0 15px 15px 0;
+    font-size: 17px;
     color: #000;
     padding: 10px;
     margin: 0 0 10px 10px;
 }
 
+.let {
+    color: #569CD6;
+}
+
+.var {
+    color: #9CDCFE;
+}
+
 @media (max-width: 768px) {
-    section { flex-direction: column; }
-    .code, .console { border-radius: 15px; }
+    section {
+        flex-direction: column;
+    }
+
+    .code{
+        box-sizing: border-box;
+    }
+
+    .code, .console { 
+        border-radius: 15px; 
+    }
 }
