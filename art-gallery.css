@@ -1,11 +1,9 @@
 /* -------- Variables -------- */
 :root {
     --bg-color: #131325;
-    --section-color: #242f3d;
+    --section-color: rgba(36,47,61,0.8);
     --text-color: #c4c4ff;
     --accent-color: #32e67f;
-    --shadow-color: rgb(64, 64, 90);
-    --shadow-color-2: rgba(0, 0, 0, 1);
     --sign-color: #4f72a0;
 }
 
@@ -54,7 +52,34 @@ h1 {
 }
 
 .gallery-section:hover {
-    box-shadow: 0 0 20px var(--shadow-color);
+    box-shadow: 
+        0 10px 15px rgba(0, 0, 0, 0.6),
+        5px 10px 20px rgba(0, 0, 0, 0.2),
+        -5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* -------- Floating Lights Background -------- */
+.floating-lights {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.floating-lights span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    will-change: transform;
+    transition: transform 0.1s linear;
 }
 
 /* -------- Drop down -------- */
