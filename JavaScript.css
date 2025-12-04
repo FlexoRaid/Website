@@ -120,7 +120,7 @@ section {
 
 .code {
     overflow: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', Courier, monospace;
     max-height: 30vh;
     min-height: 30vh;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -146,13 +146,15 @@ section {
     min-height: 30vh;
     background: #fff;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', Courier, monospace;
     border-radius: 0 15px 15px 0;
     font-size: 17px;
     color: #000;
     padding: 10px;
     margin: 0 0 10px 10px;
 }
+
+/* -------- span -------- */
 
 .let {
     color: #569CD6;
@@ -161,6 +163,32 @@ section {
 .var {
     color: #9CDCFE;
 }
+
+.methods {
+    color: #DCDCAA;
+}
+
+.num {
+    color: #B5CEA8;
+}
+
+.str {
+    color: #CE9178;
+}
+
+.par {
+    color: #DCDCAA;
+}
+
+.par {
+    color: #DCDCAA;
+}
+
+.keyword-pink {
+    color: #FF69B4;
+}
+
+
 
 @media (max-width: 768px) {
     section {
