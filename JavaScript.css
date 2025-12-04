@@ -74,8 +74,11 @@ h2 {
     width: max-content;
     height: max-content;
     min-width: 150px;
-    background: var(--section-color);
-    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0px 10px 10px 10px;
     padding: 5px 10px;
     position-anchor: menu-button;
@@ -174,10 +177,6 @@ section {
 
 .str {
     color: #CE9178;
-}
-
-.par {
-    color: #DCDCAA;
 }
 
 .par {
