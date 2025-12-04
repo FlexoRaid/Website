@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>JavaScript</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="JavaScript.css">
+</head>
+<body>
+
+<!-- Drop down -->
+<button class="menu-button" popovertarget="menu">
+    <img src="menu.png" alt="menu" class="menu-icon">
+</button>
+<div id="menu" popover>
+    <a href="./">Home</a>
+    <a href="art-gallery.html">Art Gallery</a>
+    <a href="Programming-language.html">Learn coding</a>
+    <a href="">...</a>
+</div>
+
+<!-- Programming Languges -->
+
+<section class="mainSection">
+    <h1 id="myH1">Java Script</h1>
+    <p id="myP">View console with STRG + SHIFT + C</p>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <span class="let">let</span> <span class="var">age</span> <span class="par">=</span> <span class="num">16</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">price</span> <span class="par">=</span> <span class="num">10.99</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`You are </span><span class="par">${</span><span class="var">age</span><span class="par">}</span><span class="str"> years old`</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`The price is </span><span class="par">${</span><span class="var">price</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="let">let</span> <span class="var">firstName</span> <span class="par">=</span> <span class="str">"Jonatan"</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">favoriteFood</span> <span class="par">=</span> <span class="str">"pizza"</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">email</span> <span class="par">=</span> <span class="str">"123@gmail.com"</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="par">typeof</span> <span class="var">firstName</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`Your name is </span><span class="par">${</span><span class="var">firstName</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`You like </span><span class="par">${</span><span class="var">favoriteFood</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`Your email is </span><span class="par">${</span><span class="var">email</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+            </div>
+
+        </div>
+        <div class="consoleContainer">
+            <h2>Console</h2>
+            <div class="console">
+                You are 16 years old
+                <br>
+                <br>
+                string
+                <br>
+                <br>
+                Your name is Jonatan
+                <br>
+                <br>
+                You like pizza
+                <br>
+                <br>
+                Your email is 123@gmail.com
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <span class="let">let</span> <span class="var">online</span> <span class="par">=</span> <span class="num">false</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">forSale</span> <span class="par">=</span> <span class="num">true</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">isStudent</span> <span class="par">=</span> <span class="num">true</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="par">typeof</span> <span class="var">online</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`Are you online: </span><span class="par">${</span><span class="var">online</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`Is this car for sale: </span><span class="par">${</span><span class="var">forSale</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+                <br><br>
+                <span class="var">console</span><span class="par">.</span><span class="methods">log</span><span class="par">(</span>
+                    <span class="str">`Enrolled: </span><span class="par">${</span><span class="var">isStudent</span><span class="par">}</span><span class="str">`</span>
+                <span class="par">)</span><span class="par">;</span>
+            </div>
+
+        </div>
+        <div class="consoleContainer">
+            <h2>Console</h2>
+            <div class="console">
+                boolean
+                <br>
+                <br>
+                Are you online: false
+                <br>
+                <br>
+                Is this car for sale: true
+                <br>
+                <br>
+                Enrolled: true
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <span class="let">let</span> <span class="var">Name</span> <span class="par">=</span> <span class="str">"Jonatan "</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">surname</span> <span class="par">=</span> <span class="str">"Przewlocki"</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">age</span> <span class="par">=</span> <span class="num">16</span><span class="par">;</span>
+                <br>
+                <span class="let">let</span> <span class="var">isStudent</span> <span class="par">=</span> <span class="num">true</span><span class="par">;</span>
+                <br><br>
+                <span class="var">document</span><span class="par">.</span><span class="methods">getElementById</span><span class="par">(</span><span class="str">"p1"</span><span class="par">)</span>
+                <br>
+                <span class="par">.</span><span class="var">textContent</span> <span class="par">=</span> <br>
+                <span class="str">`Your name is </span><span class="par">${</span><span class="var">Name</span> <span class="par">+</span> <span class="var">surname</span><span class="par">}</span><span class="str">`</span>
+                <br><br>
+                <span class="var">document</span><span class="par">.</span><span class="methods">getElementById</span><span class="par">(</span><span class="str">"p2"</span><span class="par">)</span>
+                <br>
+                <span class="par">.</span><span class="var">textContent</span> <span class="par">=</span> <br>
+                <span class="str">`You are </span><span class="par">${</span><span class="var">age</span><span class="par">}</span><span class="str"> years old`</span>
+                <br><br>
+                <span class="var">document</span><span class="par">.</span><span class="methods">getElementById</span><span class="par">(</span><span class="str">"p3"</span><span class="par">)</span>
+                <br>
+                <span class="par">.</span><span class="var">textContent</span> <span class="par">=</span> <br>
+                <span class="str">`Enrolled: </span><span class="par">${</span><span class="var">isStudent</span><span class="par">}</span><span class="str">`</span>
+                <br><br>
+            </div>
+
+        </div>
+        <div class="consoleContainer">
+            <h2>Website</h2>
+            <div class="console">
+                Your name is Jonatan Przewlocki
+                <br>
+                <br>
+                You are 16 years old
+                <br>
+                <br>
+                Enrolled: true
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <p></p>
+            </div>
+        </div>
+        <div class="consoleContainer">
+            <h2>Console</h2>
+            <div class="console">
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <p></p>
+            </div>
+        </div>
+        <div class="consoleContainer">
+            <h2>Console</h2>
+            <div class="console">
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <p></p>
+            </div>
+        </div>
+        <div class="consoleContainer">
+            <h2>Console</h2>
+            <div class="console">
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="codeContainer">
+            <h2>Codes</h2>
+            <div class="code">
+                <p></p>
+            </div>
+        </div>
+        <div class="consoleContainer">
+            <h2>Console</h2>
+            <div class="console">
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<script src="JavaScript.js"></script>
+</body> 
+</html>
