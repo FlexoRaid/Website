@@ -99,5 +99,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loadChessGames();
 });
-    
 
+    // Visitor counter
+
+        (function() {
+         var s = document.createElement('script');
+         s.src = "https://counterapi.com/c.js";
+         s.async = true;
+         document.getElementById('visitor-counter').appendChild(s);
+    })();
